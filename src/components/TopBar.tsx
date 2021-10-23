@@ -7,6 +7,7 @@ import { Button, Col, Menu, Popover, Row, Select } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.svg';
+import safecity from '../assets/safecity.png';
 import styled from 'styled-components';
 import { useWallet } from '../utils/wallet';
 import { ENDPOINTS, useConnectionConfig } from '../utils/connection';
@@ -141,8 +142,8 @@ export default function TopBar() {
       />
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
-          <img src={logo} alt="" />
-          {'SERUM'}
+          <img src={safecity} alt="" />
+          {'Safecity'}
         </LogoWrapper>
         <Menu
           mode="horizontal"
