@@ -188,7 +188,7 @@ function TradePageInner() {
           ) : null}
           <Col>
             <PlusCircleOutlined
-              style={{ color: '#2abdd2' }}
+              style={{ color: '#b00c92' }}
               onClick={() => setAddMarketVisible(true)}
             />
           </Col>
