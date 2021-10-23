@@ -31,7 +31,7 @@ export interface ChartContainerProps {
 }
 
 export interface ChartContainerState {}
-
+  console.log(BONFIDA_DATA_FEED, 'FLAMINGO');
 export const TVChartContainer = () => {
   // let datafeed = useTvDataFeed();
   const defaultProps: ChartContainerProps = {

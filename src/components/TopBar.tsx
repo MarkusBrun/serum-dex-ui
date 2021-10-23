@@ -7,7 +7,7 @@ import { Button, Col, Menu, Popover, Row, Select } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.svg';
-import safecity from '../assets/safecity.png';
+import safecity from '../assets/safecity-2.jpg';
 import styled from 'styled-components';
 import { useWallet } from '../utils/wallet';
 import { ENDPOINTS, useConnectionConfig } from '../utils/connection';
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  color: #2abdd2;
+  color: #ad36e0;
   font-weight: bold;
   cursor: pointer;
   img {
@@ -41,14 +41,14 @@ const LogoWrapper = styled.div`
 `;
 
 const EXTERNAL_LINKS = {
-  '/learn': 'https://docs.projectserum.com/trade-on-serum-dex/trade-on-serum-dex-1',
+  '/learn': 'HTTPS://docs.safe.city',
   '/add-market': 'https://serum-academy.com/en/add-market/',
   '/wallet-support': 'https://serum-academy.com/en/wallet-support',
   '/dex-list': 'https://serum-academy.com/en/dex-list/',
   '/developer-resources': 'https://serum-academy.com/en/developer-resources/',
   '/explorer': 'https://solscan.io',
   '/srm-faq': 'https://projectserum.com/srm-faq',
-  '/swap': 'https://swap.projectserum.com',
+  '/swap': 'https://raydium.io',
 };
 
 export default function TopBar() {
@@ -143,7 +143,7 @@ export default function TopBar() {
       <Wrapper>
         <LogoWrapper onClick={() => history.push(tradePageUrl)}>
           <img src={safecity} alt="" />
-          {'Safecity'}
+          {''}
         </LogoWrapper>
         <Menu
           mode="horizontal"
@@ -278,7 +278,7 @@ export default function TopBar() {
           >
             <Col>
               <PlusCircleOutlined
-                style={{ color: '#2abdd2' }}
+                style={{ color: '#ad36e0' }}
                 onClick={() => setAddEndpointVisible(true)}
               />
             </Col>
@@ -289,7 +289,7 @@ export default function TopBar() {
                 title="URL"
                 trigger="hover"
               >
-                <InfoCircleOutlined style={{ color: '#2abdd2' }} />
+                <InfoCircleOutlined style={{ color: '#ad36e0' }} />
               </Popover>
             </Col>
             <Col>
