@@ -61,7 +61,7 @@ input[type=number]:focus::-webkit-inner-spin-button {
     background: #212734;
   }
   .ant-table-thead > tr > th {
-    background: #1A2029;
+    background: #000000;
   }
 .ant-select-item-option-content {
   img {
@@ -74,15 +74,15 @@ input[type=number]:focus::-webkit-inner-spin-button {
 
 @-webkit-keyframes highlight {
   from { background-color: #b00c92;}
-  to {background-color: #1A2029;}
+  to {background-color: #000000;}
 }
 @-moz-keyframes highlight {
   from { background-color: #b00c92;}
-  to {background-color: #1A2029;}
+  to {background-color: #000000;}
 }
 @-keyframes highlight {
   from { background-color: #b00c92;}
-  to {background-color: #1A2029;}
+  to {background-color: #000000;}
 }
 .flash {
   -moz-animation: highlight 0.5s ease 0s 1 alternate ;

@@ -21,7 +21,7 @@ import AppSearch from './AppSearch';
 import { getTradePageUrl } from '../utils/markets';
 
 const Wrapper = styled.div`
-  background-color: #0d1017;
+  background-color: #000000;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
