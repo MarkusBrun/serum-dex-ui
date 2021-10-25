@@ -35,7 +35,7 @@ export interface ChartContainerState {}
 export const TVChartContainer = () => {
   // let datafeed = useTvDataFeed();
   const defaultProps: ChartContainerProps = {
-    symbol: 'BTC/USDC',
+    symbol: 'SFCN/USDC',
     // @ts-ignore
     interval: '60',
     auto_save_delay: 5,
@@ -47,7 +47,7 @@ export const TVChartContainer = () => {
     clientId: 'tradingview.com',
     userId: 'public_user_id',
     fullscreen: false,
-    autosize: true,
+    autosize: false,
     datafeedUrl: BONFIDA_DATA_FEED,
     studiesOverrides: {},
   };
@@ -68,7 +68,7 @@ export const TVChartContainer = () => {
       symbol:
         USE_MARKETS.find(
           (m) => m.address.toBase58() === market?.publicKey.toBase58(),
-        )?.name || 'SRM/USDC',
+        )?.name || 'SFCN/USDC',
       // BEWARE: no trailing slash is expected in feed URL
       // tslint:disable-next-line:no-any
       // @ts-ignore

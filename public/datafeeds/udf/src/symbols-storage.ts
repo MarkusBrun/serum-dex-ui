@@ -206,7 +206,8 @@ export class SymbolsStorage {
 
 	private _requestExchangeData(exchange: string): Promise<void> {
 		return new Promise((resolve: () => void, reject: (error: Error) => void) => {
-			this._requester.sendRequest<ExchangeDataResponse>(this._datafeedUrl, 'symbol_info', { group: exchange })
+
+			this._requester.sendRequest<ExchangeDataResponse>(this._datafeedUrl + '/trade-history/tv/symbols', 'symbol', { symbol: exchange })
 				.then((response: ExchangeDataResponse) => {
 					try {
 						this._onExchangeDataReceived(exchange, response);

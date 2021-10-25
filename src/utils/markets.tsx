@@ -159,7 +159,7 @@ const _SLOW_REFRESH_INTERVAL = 5 * 1000;
 const _FAST_REFRESH_INTERVAL = 1000;
 
 export const DEFAULT_MARKET = USE_MARKETS.find(
-  ({ name, deprecated }) => name === 'SRM/USDT' && !deprecated,
+  ({ name, deprecated }) => name === 'SFCN/USDC' && !deprecated,
 );
 
 export function getMarketDetails(
@@ -208,6 +208,7 @@ export function MarketProvider({ marketAddress, setMarketAddress, children }) {
   const address = marketAddress && new PublicKey(marketAddress);
   const connection = useConnection();
   const marketInfos = getMarketInfos(customMarkets);
+  console.log(marketInfos, '\nliontest');
   const marketInfo =
     address && marketInfos.find((market) => market.address.equals(address));
 
@@ -233,6 +234,7 @@ export function MarketProvider({ marketAddress, setMarketAddress, children }) {
       return;
     }
     setMarket(null);
+    console.log(marketInfo, '\nliontest2');
     if (!marketInfo || !marketInfo.address) {
       notify({
         message: 'Error loading market',
@@ -358,6 +360,7 @@ export function useBonfidaTrades() {
     if (!marketAddress) {
       return null;
     }
+    console.log('FLAMINGO')
     return await BonfidaApi.getRecentTrades(marketAddress);
   }
 

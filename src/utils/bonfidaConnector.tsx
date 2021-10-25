@@ -1,7 +1,7 @@
 
 import { BonfidaTrade } from './types';
 
-const baseUrl = 'https://serum-history.herokuapp.com'
+const baseUrl = 'https://api.dexlab.space'
 export default class BonfidaApi {
   static URL = `${baseUrl}/`
 
@@ -25,7 +25,7 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`trades/address/${marketAddress}`)
+    return BonfidaApi.get(`v1/trades/${marketAddress}`)
   }
 
   static async getOhlcv(
@@ -35,9 +35,9 @@ export default class BonfidaApi {
     to: number
   ): Promise<BonfidaTrade[] | null> {
     return BonfidaApi.get(
-      `tv/history?symbol=${symbol}&resolution=${resolution}&from=${from}&to=${to}`
+      `/history?symbol=${symbol}&resolution=${resolution}&from=${from}&to=${to}`
     )
   }
 }
 
-export const BONFIDA_DATA_FEED = `${baseUrl}/tv`
+export const BONFIDA_DATA_FEED = `https://tv-api.dexlab.space/v1`
