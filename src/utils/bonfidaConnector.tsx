@@ -25,7 +25,8 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`v1/trades/${marketAddress}`)
+
+    return BonfidaApi.get(`v1/trades/${marketAddress}/last`)
   }
 
   static async getOhlcv(
