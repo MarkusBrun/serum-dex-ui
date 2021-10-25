@@ -48,7 +48,7 @@ export const TVChartContainer = () => {
     clientId: 'tradingview.com',
     userId: 'public_user_id',
     fullscreen: false,
-    autosize: false,
+    autosize: true,
     preset: 'mobile',
     datafeedUrl: BONFIDA_DATA_FEED,
     studiesOverrides: {},
@@ -92,6 +92,7 @@ export const TVChartContainer = () => {
       user_id: defaultProps.userId,
       fullscreen: defaultProps.fullscreen,
       autosize: defaultProps.autosize,
+      preset: 'mobile',
       studies_overrides: defaultProps.studiesOverrides,
       theme: defaultProps.theme === 'Dark' ? 'Dark' : 'Light',
       overrides: {
