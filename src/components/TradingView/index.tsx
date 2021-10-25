@@ -31,7 +31,8 @@ export interface ChartContainerProps {
 }
 
 export interface ChartContainerState {}
-  console.log(BONFIDA_DATA_FEED, 'FLAMINGO');
+  console.log(BONFIDA_DATA_FEED, 'BONFIDA DATA FEED');
+  console.log(USE_MARKETS, 'USE_MARKETS');
 export const TVChartContainer = () => {
   // let datafeed = useTvDataFeed();
   const defaultProps: ChartContainerProps = {
@@ -48,6 +49,7 @@ export const TVChartContainer = () => {
     userId: 'public_user_id',
     fullscreen: false,
     autosize: false,
+    preset: 'mobile',
     datafeedUrl: BONFIDA_DATA_FEED,
     studiesOverrides: {},
   };

@@ -38,7 +38,8 @@ export function useMarketsList() {
 export function useAllMarkets() {
   const connection = useConnection();
   const { customMarkets } = useCustomMarkets();
-
+  const flamingo = getCustomMarkets();
+  console.log('testers', flamingo)
   const getAllMarkets = async () => {
     const markets: Array<{
       market: Market;
@@ -350,6 +351,11 @@ export function _useUnfilteredTrades(limit = 10000) {
   // return events
   //   .filter((event) => event.eventFlags.fill && event.nativeQuantityPaid.gtn(0))
   //   .map(market.parseFillEvent.bind(market));
+}
+
+async function getCustomMarkets() {
+  console.log('1');
+  return await BonfidaApi.getCustomMarkets();
 }
 
 export function useBonfidaTrades() {
@@ -956,6 +962,8 @@ export function useGetOpenOrdersForDeprecatedMarkets(): {
 } {
   const { connected, wallet } = useWallet();
   const { customMarkets } = useCustomMarkets();
+  const flamingo = getCustomMarkets();
+  console.log('testers', flamingo)
   const connection = useConnection();
   const marketsAndOrders = useUnmigratedDeprecatedMarkets();
   const marketsList =
